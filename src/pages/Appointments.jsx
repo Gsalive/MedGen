@@ -83,6 +83,7 @@ const Appointments = () => {
                     <th>Booking Date</th>
                     <th>Booking Time</th>
                     <th>Status</th>
+                    <th>Join call</th>
                     {userId === appointments[0].doctorId?._id ? (
                       <th>Action</th>
                     ) : (
@@ -120,9 +121,11 @@ const Appointments = () => {
                               Complete
                             </button>
                           </td>
+                          
                         ) : (
                           <></>
                         )}
+                        <td><a href="http://localhost:3900/">link</a></td>
                       </tr>
                     );
                   })}

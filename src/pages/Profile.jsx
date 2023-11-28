@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import Loading from "../components/Loading";
 import fetchData from "../helper/apiCall";
 import jwt_decode from "jwt-decode";
+import { right } from "@cloudinary/url-gen/qualifiers/textAlignment";
 
 axios.defaults.baseURL = process.env.REACT_APP_SERVER_DOMAIN;
 
@@ -228,15 +229,38 @@ function Profile() {
 
                 />
               </div>
-              <button
-                type="submit"
-                className="btn form-btn"
-                style={{ backgroundColor: "#609664", transition: "background-color .2s" }}
-                onMouseEnter={(e) => e.target.style.backgroundColor = "#77c97e"}
-                onMouseLeave={(e) => e.target.style.backgroundColor = "#609664"}
-              >
-                update
-              </button>
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
+  <button
+    type="submit"
+    className="btn form-btn"
+    style={{
+      backgroundColor: "#609664",
+      transition: "background-color .2s",
+      width: "48%", // Adjust the width as needed
+      marginRight: "2%", // Add margin for spacing
+    }}
+    onMouseEnter={(e) => (e.target.style.backgroundColor = "#77c97e")}
+    onMouseLeave={(e) => (e.target.style.backgroundColor = "#609664")}
+  >
+    Update
+  </button>
+  <button
+  onClick={() => (window.location.href = "http://localhost:3001/")}
+  className="btn form-btn"
+  style={{
+    backgroundColor: "#609664",
+    transition: "background-color .2s",
+    width: "48%", // Adjust the width as needed
+    marginLeft: "2%", // Add margin for spacing
+  }}
+  onMouseEnter={(e) => (e.target.style.backgroundColor = "#77c97e")}
+  onMouseLeave={(e) => (e.target.style.backgroundColor = "#609664")}
+>
+  Upload Files
+</button>
+
+</div>
+
             </form>
           </div>
         </section>

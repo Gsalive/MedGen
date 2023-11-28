@@ -5,6 +5,8 @@ import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
 import HomeCircles from "../components/HomeCircles";
+import ChatButton from "../components/ChatButton";
+import Eye from "../components/Eye";
 
 const Home = () => {
   return (
@@ -15,6 +17,8 @@ const Home = () => {
       <HomeCircles />
       <Contact />
       <Footer />
+      <ChatButton/>
+      <Eye/>
     </>
   );
 };

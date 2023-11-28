@@ -15,7 +15,7 @@ const Profile = lazy(() => import("./pages/Profile"));
 const Notifications = lazy(() => import("./pages/Notifications"));
 const ApplyDoctor = lazy(() => import("./pages/ApplyDoctor"));
 const Error = lazy(() => import("./pages/Error"));
-const Buymeds = lazy(() => import("./pages/Buymeds"));
+const Chatbot = lazy(()=> import("./pages/chatbot"))
 
 function App() {
   return (
@@ -67,14 +67,7 @@ function App() {
               </Protected>
             }
           />
-           <Route
-            path="/Store"
-            element={
-              <Protected>
-                <Buymeds />
-              </Protected>
-            }
-          />
+           
           <Route
             path="/profile"
             element={
@@ -112,6 +105,14 @@ function App() {
             element={
               <Protected>
                 <Dashboard type={"applications"} />
+              </Protected>
+            }
+          />
+           <Route
+            path="/chatbot"
+            element={
+              <Protected>
+                <Chatbot/>
               </Protected>
             }
           />
